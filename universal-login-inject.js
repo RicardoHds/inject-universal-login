@@ -20,6 +20,7 @@ const universalHTMLInject = {
 		});
 	`,
 	openModal: function () {
+        this.injectContent();
 		document.getElementById('modal-information').style.display = 'flex';
 	},
   injectContent: function () {
@@ -57,6 +58,5 @@ const universalHTMLInject = {
     }
   },
 };
-universalHTMLInject.injectContent();
 
 export default universalHTMLInject;
