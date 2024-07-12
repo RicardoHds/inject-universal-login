@@ -18,12 +18,11 @@ const universalHTMLInject = {
 						modal.style.display = 'none';
 				}
 		});
-
-		export function openModal() {
-      document.getElementById('modal-information').style.display = 'flex';
-    }
 	`,
-  injectContent: function (containerId) {
+	openModal: function () {
+		document.getElementById('modal-information').style.display = 'flex';
+	},
+  injectContent: function () {
     // const container = document.getElementById(containerId);
     // if (container) {
     //   container.innerHTML = this.htmlContent;
