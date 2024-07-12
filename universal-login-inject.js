@@ -917,27 +917,10 @@ const universalHTMLInject = {
 		});
 	`,
   injectContent: function () {
-    // const container = document.getElementById(containerId);
-    // if (container) {
-    //   container.innerHTML = this.htmlContent;
-
-    //   const style = document.createElement("style");
-    //   style.textContent = this.cssContent;
-    //   document.head.appendChild(style);
-
-    //   const script = document.createElement("script");
-    //   script.textContent = this.scriptContent;
-    //   document.head.appendChild(script);
-    // } else {
-    //   console.error(`Container with id "${containerId}" not found.`);
-    // }
-
     const container = document.body;
 
     if (container) {
-      const modalContainer = document.createElement("div");
-      modalContainer.innerHTML = this.htmlContent;
-      container.appendChild(modalContainer);
+      container.insertAdjacentHTML("beforeend", this.htmlContent);
 
       const style = document.createElement("style");
       style.textContent = this.cssContent;
